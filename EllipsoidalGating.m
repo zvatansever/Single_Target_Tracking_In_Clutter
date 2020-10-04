@@ -6,7 +6,7 @@
 % measurement noise: sensor.R
 
 %measurement model Jacobian
-H_jacobian=sensor.h(object.x);
+H_jacobian=sensor.H(object.x);
 
 %innovation covariance
 S=H_jacobian*object.covariance*H_jacobian'+sensor.R;
